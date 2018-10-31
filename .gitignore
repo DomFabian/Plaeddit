@@ -1,0 +1,4 @@
+# these things should be ignored:
+
+praw.ini
+*.pyc
