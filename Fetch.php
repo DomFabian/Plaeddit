@@ -17,7 +17,11 @@ $result = $conn->query($sql);
 if ($result->num_rows > 0) {
     // output data of each row
     while($row = $result->fetch_assoc()) {
-        echo "Temperature: " . $row["temperature"]. "<br>" . "Humidity: " . $row["humidity"]. "<br>Moisture: " . $row["moisture"]. "<br>time: " . $row["time"] . "<br>";
+        echo "<h2>Most Recent Results: </h2><br>"
+        . "<p id='temperature'>Temperature: " . $row["temperature"] . "</p><br>"
+        . "<p id='humidity'>Humidity: " . $row["humidity"] . "</p><br>"
+        . "<p id='moisture'>Moisture: " . $row["moisture"] . "</p><br>"
+        . "<p id='time'>Time: " . $row["time"] . "</p><br>";
     }
 } else {
     echo "0 results";
