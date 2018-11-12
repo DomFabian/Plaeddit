@@ -117,7 +117,7 @@
             die("Connection failed: " . $conn->connect_error);
         }
 
-        $sql = "SELECT * FROM plantdata1.plaeddit_data;";
+        $sql = "SELECT * FROM   plantdata1.plaeddit_data ORDER  BY dateofcare DESC LIMIT  1;";
         $result = $conn->query($sql);
 
         if ($result->num_rows > 0) {
@@ -126,7 +126,7 @@
                 echo "<p id='temperature'>Temperature: " . $row["temperature"] . " degrees Farenheit</p>"
                 . "<p id='humidity'>Humidity: " . $row["humidity"] . " [units here]</p>"
                 . "<p id='moisture'>Moisture: " . $row["moisture"] . " [units here]</p>"
-                . "<p id='time'>Time of last care: " . $row["time"] . "</p>";
+                . "<p id='time'>Time of last care: " . $row["dateofcare"] . "</p>";
             }
         } else {
             echo "0 results";
