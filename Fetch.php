@@ -1,7 +1,7 @@
 <?php
 $servername = "den1.mysql5.gear.host";
 $username = "plantdata1";
-$password = "Of5uUh~77i4?";
+$password = "XXX"; // need to change to real PW
 $dbname = "plantdata1";
 
 // Create connection

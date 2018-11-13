@@ -3,7 +3,7 @@ import MySQLdb
 
 servername = "den1.mysql5.gear.host";
 username = "plantdata1";
-pw = "Of5uUh~77i4?";
+pw = "XXX"; # need to change to real password
 dbname = "plantdata1";
 
 conn = MySQLdb.connect(host=servername, user=username, password=pw, db=dbname)

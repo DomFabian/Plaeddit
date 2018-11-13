@@ -107,7 +107,7 @@
         <?php
         $servername = "den1.mysql5.gear.host";
         $username = "plantdata1";
-        $password = "Of5uUh~77i4?";
+        $password = "XXX"; // need to fill in with real PW
         $dbname = "plantdata1";
 
         // Create connection
@@ -139,9 +139,16 @@
     <div class="tabContent" id="team">
       <h2>Meet the Team</h2>
       <div>
-        <h3>Dominick Fabian</h3>
-        <h3>Hayley Eckert</h3>
-        <h3>Bill Newman</h3>
+        <h3>Dominick</h3>
+        <p>Dominick is a senior computer engineering major from Dallas, Texas.
+        In his free time, he enjoys being outdoors and spending time with
+        friends. </p><br>
+        <h3>Hayley</h3>
+        <p>Hayley is a senior computer engineering major from Dallas, Texas.
+        In her free time, Hayley enjoys drinking coffee and playing golf. </p><br>
+        <h3>Bill</h3>
+        <p>Bill is a senior computer engineering major from Murphy, Texas.
+        In his free time, Bill enjoys playing basketball and trying new food. </p><br>
       </div>
     </div>
 
