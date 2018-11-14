@@ -1,0 +1,27 @@
+**CSCE 462 Project Parts List**
+
+Raspberry Pi 3 Model B		- $0      - provided
+
+Breadboard and wires		- $0      - provided
+
+Plant-Gro Light			- $0      - already have
+
+MCP3008 ADC chip (8-channel)	- $3.75   - https://www.adafruit.com/product/856
+
+$Soil moisture sensor		- $5.99   - https://www.amazon.com/gp/product/B00AFCNR3U
+
+$Tempurature/humidity sensor	- $9.99   - https://www.amazon.com/Digital-Temperature-Humidity-measure-Arduino/dp/B018JO5BRK/
+
+$Water pump			- $7.99   - https://www.amazon.com/Tetra-77851-Whisper-Pump-10-Gallon/dp/B0009YJ4NG
+
+$Water tubing (25' @ 3/16")	- $5.69   - https://www.amazon.com/Standard-Airline-Tubing-Accessories-25-Feet/dp/B0002563MW
+
+$IoT relay			- $27.00  - https://www.amazon.com/Iot-Relay-Enclosed-High-power-Raspberry/dp/B00WV7GMA2
+
+$(Very artsy) water reseroirs	- $9.97   - https://www.amazon.com/Ball-Mouth-Gallon-Mason-Jar/dp/B00YVYPHX6
+
+Plant!!
+
+$Camera?				  - https://www.amazon.com/Raspberry-Pi-Camera-Module-Megapixel/dp/B01ER2SKFS
+
+			Total:    $70.38 (pre- tax and ship)
