@@ -6,3 +6,4 @@ A plant support system and social experiment
 #### Meeting 11/5: 5:00pm - 5:30pm, all team members present
 #### 11/7: 3-7pm, Dominick builds and tests water pump system
 #### 11/11: 3-7 pm, Billy and Hayley work on connecting DB to website
+#### 11/13: 5/10 pm, Dominick builds working sensor system
