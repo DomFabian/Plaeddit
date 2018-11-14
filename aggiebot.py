@@ -99,5 +99,5 @@ def parse_comment(text):
 
 a, b = tally_votes(get_todays_post())
 
-print "a = " + str(a)
-print "b = " + str(b)
+print "water_votes = " + str(a)
+print "total_votes = " + str(b)
