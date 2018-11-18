@@ -20,7 +20,11 @@ def make_daily_post():
 
 &nbsp;
 
-When your vote has been tallied, I will reply to your post!'''
+When your vote has been tallied, I will reply to your post!
+
+&nbsp;
+
+To view the current plant status, click [HERE!](http://planeddit.gearhostpreview.com)'''
 
     submission = plaeddit.submit(title, selftext=body, send_replies=False)
 
