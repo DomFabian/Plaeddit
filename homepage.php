@@ -81,13 +81,14 @@
     <h1>Plaeddit</h1>
 
     <ul id="tabs">
-      <li><a href="#about">Our Project</a></li>
+      <li><a href="#about">About the Project</a></li>
       <li><a href="#status">Plant Status</a></li>
+      <li><a href="#Reddit">Reddit Activity</a></li>
       <li><a href="#team">Meet the Team</a></li>
     </ul>
 
     <div class="tabContent" id="about">
-      <h2>Our Project</h2>
+      <h2>About the Project</h2>
       <div>
         <p>This project consists of creating an autonomous watering and
           sunlight system to allow a plant to be controlled through social
@@ -98,6 +99,10 @@
           and/or Reddit. This website displays the current conditions of the
           plant so that social media users can make an informed decision about
           watering the plant or giving the plant light.</p>
+          <br>
+          <p>To get in on the action, first view the current conditions of the
+            plant on the "Plant Status" tab. Once you are an informed user,
+            head to the "Reddit Activity" tab to comment on the latest post.</p>
       </div>
     </div>
 
@@ -126,7 +131,7 @@
                 echo "<p id='temperature'>Temperature: " . $row["temperature"] . " degrees Farenheit</p>"
                 . "<p id='humidity'>Humidity: " . $row["humidity"] . "%</p>"
                 . "<p id='moisture'>Moisture: " . $row["moisture"] . "%</p>"
-                . "<p id='time'>Time of last care: " . $row["dateofcare"] . "</p>";
+                . "<p id='time'>Update time: " . $row["dateofcare"] . "</p>";
             }
         } else {
             echo "0 results";
@@ -151,7 +156,9 @@
         In his free time, Bill enjoys playing basketball and trying new food. </p><br>
       </div>
     </div>
-
-
+  <div class = "tabContent" id="Reddit">
+    <h2>Check out the Reddit!</h2>
+    <script src='https://redditjs.com/subreddit.js' data-subreddit='Plaeddit'  ></script>
+  </div>
   </body>
 </html>
