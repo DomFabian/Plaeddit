@@ -43,9 +43,9 @@ def get_soil_moisture():
     return vals[soil_moisture_data_channel] / 1024.0
 
 humidity, temperature = get_humidity_and_temp()
-temperature = C_to_F(temperature)
 
 if humidity is not None and temperature is not None:
+    temperature = C_to_F(temperature)
     print('Temp={0:0.1f}*  Humidity={1:0.1f}%'.format(temperature, humidity))
 else:
     print('Failed to get humidity and temperature.')
