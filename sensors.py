@@ -40,7 +40,7 @@ def get_soil_moisture():
     io.output(soil_moisture_enable, io.HIGH)
     vals = get_mcp3008_values()
     io.output(soil_moisture_enable, io.LOW)
-    return vals[soil_moisture_data_channel] #/ 1024.0
+    return vals[soil_moisture_data_channel] / 581.0 * 100.0
 '''
 humidity, temperature = get_humidity_and_temp()
 
