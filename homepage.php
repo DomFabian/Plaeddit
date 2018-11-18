@@ -91,7 +91,7 @@
       <div>
         <p>This project consists of creating an autonomous watering and
           sunlight system to allow a plant to be controlled through social
-          media interactions (e.g. Twitter, Reddit). This system consists of
+          media interactions on Reddit. This system consists of
           light, temperature, and moisture sensors as well as a water pump and
           UV light. The water pump and UV light can be controlled through
           crowdsourced data from social media interactions from Twitter
@@ -107,7 +107,7 @@
         <?php
         $servername = "den1.mysql5.gear.host";
         $username = "plantdata1";
-        $password = "XXX"; // need to fill in with real PW
+        $password = "BestProject!"; // need to fill in with real PW
         $dbname = "plantdata1";
 
         // Create connection
@@ -124,8 +124,8 @@
             // output data of each row
             while($row = $result->fetch_assoc()) {
                 echo "<p id='temperature'>Temperature: " . $row["temperature"] . " degrees Farenheit</p>"
-                . "<p id='humidity'>Humidity: " . $row["humidity"] . " [units here]</p>"
-                . "<p id='moisture'>Moisture: " . $row["moisture"] . " [units here]</p>"
+                . "<p id='humidity'>Humidity: " . $row["humidity"] . "%</p>"
+                . "<p id='moisture'>Moisture: " . $row["moisture"] . "%</p>"
                 . "<p id='time'>Time of last care: " . $row["dateofcare"] . "</p>";
             }
         } else {

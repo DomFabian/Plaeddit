@@ -5,6 +5,7 @@ import Adafruit_GPIO.SPI as SPI
 import Adafruit_MCP3008
 import Adafruit_DHT
 import RPi.GPIO as io
+import mysql.connector
 
 io.setmode(io.BOARD)
 io.setwarnings(False)
@@ -17,6 +18,17 @@ mcp = Adafruit_MCP3008.MCP3008(spi=SPI.SpiDev(SPI_PORT, SPI_DEVICE))
 humid_temp = 5
 soil_moisture_enable = 40
 soil_moisture_data_channel = 0
+
+# Set up database Connection
+servername = "den1.mysql5.gear.host"
+username = "plantdata1"
+pw = "BestProject!" # need to change to real password
+dbname = "plantdata1"
+
+cnx = mysql.connector.connect(user=username, password=pw,
+                              host=servername,
+                              database=dbname)
+cur = cnx.cursor()
 
 # set up the pins
 io.setup(soil_moisture_enable, io.OUT)
@@ -41,16 +53,22 @@ def get_soil_moisture():
     vals = get_mcp3008_values()
     io.output(soil_moisture_enable, io.LOW)
     return vals[soil_moisture_data_channel] / 581.0 * 100.0
-'''
-humidity, temperature = get_humidity_and_temp()
 
+humidity, temperature = get_humidity_and_temp()
 if humidity is not None and temperature is not None:
     temperature = C_to_F(temperature)
     print('Temp={0:0.1f}*  Humidity={1:0.1f}%'.format(temperature, humidity))
 else:
     print('Failed to get humidity and temperature.')
-'''
+
 moisture = get_soil_moisture()
 if moisture is not None:
     print('Moisture={0:0.1f}%'.format(moisture))
 
+# Add to database
+if humidity is not None and temperature is not None and moisture is not None:
+    query = 'insert into plantdata1.plaeddit_data (temperature, humidity, moisture, dateofcare) values (' + str(temperature) + ', ' + str(humidity) + ', ' + str(moisture) + ', CURRENT_TIMESTAMP);'
+    cur.execute(query)
+
+cnx.commit()
+cnx.close()
