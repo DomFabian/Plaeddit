@@ -3,9 +3,16 @@
 import praw
 import datetime
 import time
+import RPi.GPIO as io
 
 reddit = praw.Reddit('AggieBot')                
 plaeddit = reddit.subreddit('plaeddit')
+
+# set up the pins
+io.setmode(io.BOARD)
+io.setwarnings(False)
+pump_pin = 38
+io.setup(pump_pin, io.OUT)
 
 def make_daily_post():
     water_command = 'water'
@@ -37,6 +44,7 @@ def get_todays_post():
             return submission
 
     # if we get here then we can't find today's post!!
+    return None
 
 def tally_votes(submission):
     ''' takes in a submission object and tallies the votes in it.
@@ -96,8 +104,23 @@ def parse_comment(text):
     # handle case where there is no clear vote
     return 0
 
+def pump_water(time_sec):
+    if time_sec > 10:
+        print('No')
+        return
+    io.output(pump_pin, io.HIGH)
+    time.sleep(time_sec)
+    io.output(pump_pin, io.LOW)
 
-a, b = tally_votes(get_todays_post())
 
-print "water_votes = " + str(a)
-print "total_votes = " + str(b)
+# ----------- MAIN -----------
+
+post = get_todays_post()
+if post is not None:
+    water_votes, total_votes = tally_votes(get_todays_post())
+    print "water_votes = " + str(water_votes)
+    print "total_votes = " + str(total_votes)
+
+    if water_votes > 0:
+        pump_water(5)
+
