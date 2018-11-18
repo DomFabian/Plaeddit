@@ -41,7 +41,7 @@ def get_soil_moisture():
     vals = get_mcp3008_values()
     io.output(soil_moisture_enable, io.LOW)
     return vals[soil_moisture_data_channel] / 1024.0
-
+'''
 humidity, temperature = get_humidity_and_temp()
 
 if humidity is not None and temperature is not None:
@@ -49,7 +49,7 @@ if humidity is not None and temperature is not None:
     print('Temp={0:0.1f}*  Humidity={1:0.1f}%'.format(temperature, humidity))
 else:
     print('Failed to get humidity and temperature.')
-
+'''
 moisture = get_soil_moisture()
 if moisture is not None:
     print('Moisture={0:0.1f}%'.format(moisture))
