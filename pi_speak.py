@@ -25,7 +25,6 @@ cur.execute('SELECT * FROM plantdata1.plaeddit_data ORDER  BY dateofcare DESC LI
 temp_value = 0
 humid_val = 0
 mois_val = 0
-date = ""
 
 # Fetch results
 for row in cur.fetchall():
@@ -40,6 +39,9 @@ cmd_out= '--stdout > /home/pi/Desktop/Text.wav ' # To store the voice file
 
 # FIXME: need to get temp_value, mois_value, humid_value
 now = datetime.datetime.now()
+print str(temp_value)
+print str(humid_value)
+print str(mois_value)
 
 text = '''Welcome_to_the_Daily_Plant_Update._Thanks_for_tuning_in._
 Today_is_''' + datetime.datetime.now().strftime("%m") + '''_''' + datetime.datetime.now().strftime("%d")
