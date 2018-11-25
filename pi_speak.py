@@ -33,7 +33,7 @@ for row in cur.fetchall():
     mois_value = row[2]
     date = str(row[3])
 
-cmd_beg= 'espeak -g180 -ven+f2 '
+cmd_beg= 'espeak -g100 -ven+f2 '
 cmd_end= '  2>/dev/null' # To play back the stored .wav file and to dump the std errors to /dev/null
 
 # FIXME: need to get temp_value, mois_value, humid_value
