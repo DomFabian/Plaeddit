@@ -44,9 +44,9 @@ now = datetime.datetime.now()
 text = '''Welcome_to_the_Daily_Plant_Update._Thanks_for_tuning_in._
 Today_is_''' + str(now.month()) + '''_''' + str(now.day())
 + '''_''' + str(now.year()) + '''._The_current_temperature_of_the_plant_
-is_''' + temp_value + '''_degrees_Farenheit._''' + '''.The_current_humidity_of_the_plant_
-is_''' + humid_value + '''_percent._''' + '''.The_current_moisture_of_the_plant_
-is_''' + mois_value + '''_percent._Do_not_forget_to_comment_on_todays_post_to
+is_''' + str(temp_value) + '''_degrees_Farenheit._''' + '''.The_current_humidity_of_the_plant_
+is_''' + str(humid_value) + '''_percent._''' + '''.The_current_moisture_of_the_plant_
+is_''' + str(mois_value) + '''_percent._Do_not_forget_to_comment_on_todays_post_to
 _help_care_for_the_plant!'''
 
 #Calls the Espeak TTS Engine to read aloud a Text
