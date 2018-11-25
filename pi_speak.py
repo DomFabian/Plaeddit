@@ -38,9 +38,6 @@ cmd_end= '  2>/dev/null' # To play back the stored .wav file and to dump the std
 
 # FIXME: need to get temp_value, mois_value, humid_value
 now = datetime.datetime.now()
-print str(temp_value)
-print str(humid_value)
-print str(mois_value)
 
 text = ('Welcome_to_the_Daily_Plant_Update_Thanks_for_tuning_in_' + 'Today_is_'
 + datetime.datetime.now().strftime("%m") + '_' + datetime.datetime.now().strftime("%d")
