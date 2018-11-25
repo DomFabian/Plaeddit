@@ -45,11 +45,8 @@ print str(mois_value)
 
 text = '''Welcome_to_the_Daily_Plant_Update._Thanks_for_tuning_in._
 Today_is_''' + datetime.datetime.now().strftime("%m") + '''_''' + datetime.datetime.now().strftime("%d")
-+ '''_''' + datetime.datetime.now().strftime("%Y") + '''._The_current_temperature_of_the_plant_
-is_''' + str(temp_value) + '''_degrees_Farenheit._''' + '''.The_current_humidity_of_the_plant_
-is_''' + str(humid_value) + '''_percent._''' + '''.The_current_moisture_of_the_plant_
-is_'''
-# + str(mois_value) + '''_percent._Do_not_forget_to_comment_on_todays_post_to_help_care_for_the_plant!'''
++ '''_''' + datetime.datetime.now().strftime("%Y") + '''._The_current_temperature_of_the_plant_is_'''
+# + str(temp_value) + '''_degrees_Farenheit._''' + '''.The_current_humidity_of_the_plant_is_''' + str(humid_value) + '''_percent._''' + '''.The_current_moisture_of_the_plant_is_''' + str(mois_value) + '''_percent._Do_not_forget_to_comment_on_todays_post_to_help_care_for_the_plant!'''
 
 #Calls the Espeak TTS Engine to read aloud a Text
 call([cmd_beg+cmd_out+text+cmd_end], shell=True)
