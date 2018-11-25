@@ -7,6 +7,7 @@
 from num2words import num2words
 from subprocess import call
 import mysql.connector
+import datetime
 
 servername = "den1.mysql5.gear.host"
 username = "plantdata1"
@@ -33,8 +34,9 @@ for row in cur.fetchall():
     mois_value = row[2]
     date = str(row[3])
 
-cmd_beg= 'espeak '
+cmd_beg= 'espeak -ven+f2'
 cmd_end= ' | aplay /home/pi/Desktop/Text.wav  2>/dev/null' # To play back the stored .wav file and to dump the std errors to /dev/null
+cmd_out= '--stdout > /home/pi/Desktop/Text.wav ' # To store the voice file
 
 # FIXME: need to get temp_value, mois_value, humid_value
 now = datetime.datetime.now()
@@ -48,4 +50,4 @@ is_''' + mois_value + '''_percent._Do_not_forget_to_comment_on_todays_post_to
 _help_care_for_the_plant!'''
 
 #Calls the Espeak TTS Engine to read aloud a Text
-call([cmd_beg+text+cmd_end], shell=True)
+call([cmd_beg+cmd_out+text+cmd_end], shell=True)
