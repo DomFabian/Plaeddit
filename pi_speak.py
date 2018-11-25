@@ -48,8 +48,7 @@ Today_is_''' + datetime.datetime.now().strftime("%m") + '''_''' + datetime.datet
 + '''_''' + datetime.datetime.now().strftime("%Y") + '''._The_current_temperature_of_the_plant_
 is_''' + str(temp_value) + '''_degrees_Farenheit._''' + '''.The_current_humidity_of_the_plant_
 is_''' + str(humid_value) + '''_percent._''' + '''.The_current_moisture_of_the_plant_
-is_''' + str(mois_value) + '''_percent._Do_not_forget_to_comment_on_todays_post_to
-_help_care_for_the_plant!'''
+is_''' + str(mois_value) + '''_percent._Do_not_forget_to_comment_on_todays_post_to_help_care_for_the_plant!'''
 
 #Calls the Espeak TTS Engine to read aloud a Text
 call([cmd_beg+cmd_out+text+cmd_end], shell=True)
