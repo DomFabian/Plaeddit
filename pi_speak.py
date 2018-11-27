@@ -1,9 +1,10 @@
+#!/usr/bin/python
+
 # Plug a speaker into the audio jack of Pi
 #
 # Follow these commands:
 # https://www.dexterindustries.com/howto/make-your-raspberry-pi-speak/
 
-#!/usr/bin/python
 from num2words import num2words
 from subprocess import call
 import mysql.connector
