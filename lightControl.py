@@ -25,7 +25,7 @@ pixels = neopixel.NeoPixel(pixel_pin, num_pixels, brightness=0.2, auto_write=Fal
 
 # Turn on light to all white, will stay on until turned off
 # Comment this line out if you have RGBW/GRBW NeoPixels
-pixels.fill((255, 255, 255))
+pixels.fill((0, 0, 0))
 pixels.show()
 
 # -- End of Light Control ---
