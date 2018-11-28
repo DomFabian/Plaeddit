@@ -160,7 +160,7 @@ post = get_todays_post()
 #    if water_votes > 0:
 #        pump_water(5)
 
-    light_votes = 1
+light_votes = 1
 if light_votes > 0:
     call(['python3 /home/pi/Documents/plaeddit/lightOn.py'], shell=True)
 elif light_votes <= 0:
