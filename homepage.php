@@ -131,7 +131,7 @@
                 echo "<p id='temperature'>Temperature: " . $row["temperature"] . " degrees Farenheit</p>"
                 . "<p id='humidity'>Humidity: " . $row["humidity"] . "%</p>"
                 . "<p id='moisture'>Moisture: " . $row["moisture"] . "%</p>"
-                . "<p id='time'>Update time: " . $row["dateofcare"] . "</p>";
+                . "<p id='time'>Update time: " . $row["dateofcare"] . " MST</p>";
             }
         } else {
             echo "0 results";
