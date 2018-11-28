@@ -150,18 +150,18 @@ def pump_water(time_sec):
 # ----------- MAIN -----------
 
 post = get_todays_post()
-post = "dsf"
-if post is not None:
-    light_votes, water_votes, total_votes = tally_votes(get_todays_post())
-    print "light_votes = " + str(light_votes)
-    print "water_votes = " + str(water_votes)
-    print "total_votes = " + str(total_votes)
 
-    if water_votes > 0:
-        pump_water(5)
+#if post is not None:
+#    light_votes, water_votes, total_votes = tally_votes(get_todays_post())
+#    print "light_votes = " + str(light_votes)
+#    print "water_votes = " + str(water_votes)
+#    print "total_votes = " + str(total_votes)
+
+#    if water_votes > 0:
+#        pump_water(5)
 
     light_votes = 1
-    if light_votes > 0:
-        call(['python3 /home/pi/Documents/plaeddit/lightOn.py'], shell=True)
-    elif light_votes <= 0:
-        call(['python3 /home/pi/Documents/plaeddit/lightOff.py'], shell=True)
+if light_votes > 0:
+    call(['python3 /home/pi/Documents/plaeddit/lightOn.py'], shell=True)
+elif light_votes <= 0:
+    call(['python3 /home/pi/Documents/plaeddit/lightOff.py'], shell=True)
