@@ -189,6 +189,7 @@ if post is not None:
     if water_votes > 0:
         pump_water(5)
 
+    light_votes = 1
     if light_votes > 0:
         call(['sudo python3 lightOn.py'], shell=True)
     elif light_votes <= 0:
