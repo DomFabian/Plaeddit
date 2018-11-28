@@ -24,7 +24,6 @@ pixels = neopixel.NeoPixel(pixel_pin, num_pixels, brightness=0.2, auto_write=Fal
                            pixel_order=ORDER)
 
 # Turn on light to all white, will stay on until turned off
-print("hi")
 pixels.fill((255, 255, 255))
 pixels.show()
 
