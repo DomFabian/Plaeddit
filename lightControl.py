@@ -1,19 +1,31 @@
+#!/usr/bin/python3
+# ----------- MAIN -----------
+
+# --- Light Control ----
+# Have to install some libraries first, look on:
+# https://learn.adafruit.com/neopixels-on-raspberry-pi/python-usage
+import time
 import board
-import digitalio
-import busio
+import neopixel
 
-print("Hello blinka!")
+# Choose an open pin connected to the Data In of the NeoPixel strip, i.e. board.D18
+# NeoPixels must be connected to D10, D12, D18 or D21 to work.
+# D18 is same as GPIO18 on board.
+pixel_pin = board.D18
 
-# Try to great a Digital input
-pin = digitalio.DigitalInOut(board.D4)
-print("Digital IO ok!")
+# The number of NeoPixels
+num_pixels = 256
 
-# Try to create an I2C device
-i2c = busio.I2C(board.SCL, board.SDA)
-print("I2C ok!")
+# The order of the pixel colors - RGB or GRB. Some NeoPixels have red and green reversed!
+# For RGBW NeoPixels, simply change the ORDER to RGBW or GRBW.
+ORDER = neopixel.GRB
 
-# Try to create an SPI device
-spi = busio.SPI(board.SCLK, board.MOSI, board.MISO)
-print("SPI ok!")
+pixels = neopixel.NeoPixel(pixel_pin, num_pixels, brightness=0.2, auto_write=False,
+                           pixel_order=ORDER)
 
-print("done!")
+# Turn on light to all white, will stay on until turned off
+# Comment this line out if you have RGBW/GRBW NeoPixels
+pixels.fill((255, 255, 255))
+pixels.show()
+
+# -- End of Light Control ---
