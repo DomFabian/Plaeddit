@@ -71,7 +71,7 @@ def tally_votes(submission):
                 light_vote_text = "light"
             elif light_vote == -1:
                 light_vote_text = "not light"
-            elif vote == 0:
+            elif light_vote == 0:
                 # remove the comment
                 comment.delete()
                 continue
