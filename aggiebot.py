@@ -162,6 +162,6 @@ if post is not None:
 
     light_votes = 1
     if light_votes > 0:
-        call(['sudo python3 /home/pi/Documents/plaeddit/lightOn.py'], shell=True)
+        call(['python3 /home/pi/Documents/plaeddit/lightOn.py'], shell=True)
     elif light_votes <= 0:
-        call(['sudo python3 /home/pi/Documents/plaeddit/lightOff.py'], shell=True)
+        call(['python3 /home/pi/Documents/plaeddit/lightOff.py'], shell=True)
