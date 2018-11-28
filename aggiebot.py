@@ -150,7 +150,7 @@ def pump_water(time_sec):
 # ----------- MAIN -----------
 
 post = get_todays_post()
-
+post = "dsf"
 if post is not None:
     light_votes, water_votes, total_votes = tally_votes(get_todays_post())
     print "light_votes = " + str(light_votes)
