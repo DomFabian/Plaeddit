@@ -1,5 +1,5 @@
 #!/usr/bin/python
-
+from subprocess import call
 import praw
 import datetime
 import time
@@ -179,6 +179,7 @@ pixels.show()
 # -- End of Light Control ---
 
 post = get_todays_post()
+
 if post is not None:
     light_votes, water_votes, total_votes = tally_votes(get_todays_post())
     print "light_votes = " + str(light_votes)
@@ -189,8 +190,6 @@ if post is not None:
         pump_water(5)
 
     if light_votes > 0:
-        pixels.fill((255, 255, 255))
-        pixels.show()
-        time.sleep(10)
-        pixels.fill((0, 0, 0))
-        pixels.show()
+        call(['sudo python3 lightOn.py'], shell=True)
+    elif light_votes <= 0:
+        call(['sudo python3 lightOff.py'], shell=True)
