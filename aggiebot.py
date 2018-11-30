@@ -63,8 +63,13 @@ def tally_votes(submission):
             elif water_vote == -1:
                 water_vote_text = "not water"
 
-            body = "Understood! I'll tally your vote to " + water_vote_text + " the plant!"
-            comment.reply(body)
+            # if the comment has nothing to do with water, then don't comment just yet
+            if water_vote != 0:
+                body = "Understood! I'll tally your vote to " + water_vote_text + " the plant!"
+                comment.reply(body)
+
+                # so that we don't get banned or something, idk
+                time.sleep(1)
 
             light_vote_text = ""
             if light_vote == 1:
@@ -137,7 +142,6 @@ if post is not None:
     if water_votes > 0:
         pump_water(5)
 
-    light_votes = 1
     if light_votes > 0:
         call(['python3 /home/pi/Documents/plaeddit/lightOn.py'], shell=True)
     elif light_votes <= 0:

@@ -29,7 +29,7 @@ def make_daily_post():
     &nbsp;
     When your vote has been tallied, I will reply to your post!
     &nbsp;
-    The link to the live stream can be found [here](https://www.youtube.com/watch?v=6dtSzPJiyGE) 
+    The link to the live stream can be found [here](https://www.youtube.com/channel/UCDIH0ozRaNqxIv_ouZni64g/live) 
     and the link to the plant's website can be found [here](http://planeddit.gearhostpreview.com/homepage.php)!'''
 
     submission = plaeddit.submit(title, selftext=body, send_replies=False)
