@@ -99,6 +99,7 @@ def parse_comment_water(text):
 
     previous_word = ""
     for word in text.split():
+        word = word.lower()
         if word == "water":
             return -1 if previous_word == "no" else 1
         previous_word = word
@@ -113,6 +114,7 @@ def parse_comment_light(text):
 
     previous_word = ""
     for word in text.split():
+        word = word.lower()
         if word == "light":
             return -1 if previous_word == "no" else 1
         previous_word = word
