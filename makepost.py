@@ -25,8 +25,12 @@ def make_daily_post():
     Replies containing only `''' + no_light_command + '''` will be a vote for
     not lighting the plant.
     Any replies not containing one of these four phrases will be ignored!
-    All voting for the day must be completed by 5:00pm Central Time. &nbsp;
-    When your vote has been tallied, I will reply to your post!'''
+    All voting for the day must be completed by 5:00pm Central Time. 
+    &nbsp;
+    When your vote has been tallied, I will reply to your post!
+    &nbsp;
+    The link to the live stream can be found [here](https://www.youtube.com/watch?v=6dtSzPJiyGE) 
+    and the link to the plant's website can be found [here](http://planeddit.gearhostpreview.com/homepage.php)!'''
 
     submission = plaeddit.submit(title, selftext=body, send_replies=False)
 
